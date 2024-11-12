@@ -110,7 +110,6 @@ export async function cryptoPayWebhookHandler(request: FastifyRequest, reply: Fa
                 return
             } finally {
                 const result = await session.endSession()
-                console.log(result)
                 console.log('Transaction successfully processed')
             }
         }

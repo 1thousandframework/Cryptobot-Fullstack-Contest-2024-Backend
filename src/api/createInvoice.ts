@@ -36,8 +36,8 @@ export default async function methodCreateInvoice(user: APIUser, body: APIReques
 
         // Creating CryptoPay invoice.
         const resp = await cryptoPay.createInvoice({
-            amount: '1.1',
-            asset: 'USDT',
+            amount: gift.price.toString(),
+            asset: gift.asset.toUpperCase(),
             description: f(lc(lang, 'gift_buy_desc'), gift.name),
             payload: [gift._id, user.id, user.language_code || 'en'].join(' '),
             expired_in: INVOICE_LIFETIME

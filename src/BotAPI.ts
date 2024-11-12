@@ -324,7 +324,6 @@ export class BotAPI {
         } else if (result.ok) {
             return true
         } else {
-            console.log(result)
             return new Error(result.description)
         }
     }
@@ -342,7 +341,6 @@ export class BotAPI {
             if (result.ok) {
                 return result.result as Message
             } else {
-                console.log(result)
                 return new Error(result.description)
             }
         }

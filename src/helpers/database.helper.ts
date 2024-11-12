@@ -94,7 +94,7 @@ export async function migrate(targetSchemeId: number): Promise<boolean | Error> 
                 },
                 {
                     name: 'Green Star',
-                    price: 0.01,
+                    price: 0.001,
                     asset: 'ETH',
                     supply: 5000,
                     color: '#46D100',
@@ -104,7 +104,7 @@ export async function migrate(targetSchemeId: number): Promise<boolean | Error> 
                 },
                 {
                     name: 'Blue Star',
-                    price: 5,
+                    price: 0.2,
                     asset: 'TON',
                     supply: 3000,
                     color: '#007AFF',
@@ -467,7 +467,6 @@ export default class DatabaseHelper {
             return Cache.availability.get(purchaseActionId)!
         } else {
             const action = await DatabaseHelper.getAction(purchaseActionId) as Action
-            console.log(action.insert_date)
             const result = await db.count(Collection.actions, {
                 // [Key.action_type]: ACTION_TYPE_SEND,
                 // [Key.gift_id]: new ObjectId(action.gift_id),
@@ -479,7 +478,6 @@ export default class DatabaseHelper {
                     {[Key.gift_id]: {$eq: new ObjectId(action.gift_id)}}
                 ]
             }) + 1
-            console.log(result)
             Cache.availability.set(purchaseActionId, result)
             return result
         }

@@ -25,7 +25,6 @@ export default async function methodReceiveGift(user: APIUser, body: APIRequest,
         return apiReplyErr(reply, apiErrNotFound)
     }
     if (action.target_action_id !== undefined) {
-        console.log('123123')
         return apiReplyErr(reply, apiErrAlreadyActivated)
     }
 

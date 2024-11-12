@@ -133,10 +133,8 @@ export async function initTelegramBots () {
                     }
                 ])
             } else {
-                console.log('Not found')
             }
         } else {
-            console.log('No match')
         }
     })
 
