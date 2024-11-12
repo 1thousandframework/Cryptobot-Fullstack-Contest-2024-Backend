@@ -1,0 +1,14 @@
+{
+  "hello_msg": "\uD83C\uDF81 Here you can buy and send gifts to your friends.",
+  "Open App": "",
+  "gift_buy_desc": "Purchasing a {0} gift",
+  "gift_buy_congrats": "You have purchased the gift of {0}.",
+  "open_gifts": "Open Gifts",
+  "commands": "start Open main menu",
+  "Send Gift": "",
+  "send_gift_desc": "Send a gift of {0}.",
+  "Receive Gift": "",
+  "gift_offer": "I have a <b>gift</b> for you! Tap the button below to open it.",
+  "gift_received_notify": "{0} received your gift of {1}.",
+  "gift_activated_notify": "{0} has given you the gift of {1}."
+}

@@ -1,0 +1,5 @@
+export const ErrNetworkError = new Error('network error')
+export const ErrServerError = new Error('server error')
+export const ErrCantGetSchemeId = new Error('can\'t get scheme id')
+export const ErrUnknownError = new Error('unknown error')
+export const ErrCantParseTelegramUpdate = new Error('can\'t parse telegram update')
